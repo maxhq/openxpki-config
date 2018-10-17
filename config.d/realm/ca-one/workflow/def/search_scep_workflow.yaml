@@ -58,8 +58,8 @@ field:
         type: select
         option:
           item:
-           - scep-server-1
-           - scep-server-2
+           - generic 
+           - router           
         required: 1
 
     redirect_result:
