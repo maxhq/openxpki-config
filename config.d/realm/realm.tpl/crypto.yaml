@@ -12,8 +12,8 @@ token:
     backend: OpenXPKI::Crypto::Backend::OpenSSL
 
     # Template to create key, available vars are
-    # ALIAS (ca-signer-1), GROUP (ca-signer), GENERATION (1)
-    key: /etc/openxpki/ssl/[% PKI_REALM %]/[% ALIAS %].pem
+    # ALIAS (ca-signer-1), GROUP (ca-signer), GENERATION (1), IDENTIFIER
+    key: /etc/openxpki/keys/[% PKI_REALM %]/[% IDENTIFIER %].pem
 
     # possible values are OpenSSL, nCipher, LunaCA
     engine: OpenSSL
@@ -49,7 +49,7 @@ token:
   #ca-special-scep:
   #  inherit: ca-scep
   #  key_store: DATAPOOL
-  #  key: "[% ALIAS %]"
+  #  key: "[% IDENTIFIER %]"
 
 # Define the secret groups
 secret:
